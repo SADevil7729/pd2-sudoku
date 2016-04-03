@@ -103,7 +103,7 @@ for(i=0;i<=2;i++)
 				{
 					if(temp[k+i*3][l+j*3][m]==0&&a[k+i*3][l+j*3]==0)
 					{
-						temp2++;
+	  					temp2++;
 						if(temp2>=2)
 						{
 							goto step1;
@@ -119,37 +119,10 @@ for(i=0;i<=2;i++)
 			{
 				return 1;
 			}
-			
+
 		}
 	}
 }
-
-for(i=1;i<=9;i++)
-{
-	for(j=1;j<=9;j++)
-	{
-		temp2=0;
-		for(k=1;k<=9;k++)
-		{
-			if(temp[i][j][k]==0&&a[i][j]==0)
-			{
-				temp2++;
-				if(temp2>=2)
-				{
-					break;
-				}
-				n1=i;
-				n2=j;
-				n3=k;
-			}
-		}
-		if(temp2==1)
-		{
-			return 1;
-		}
-	}
-}
-
 
 for(i=1;i<=9;i++)
 {
@@ -202,6 +175,33 @@ for(i=1;i<=9;i++)
 		}
 	}
 }
+
+for(i=1;i<=9;i++)
+{
+	for(j=1;j<=9;j++)
+	{
+		temp2=0;
+		for(k=1;k<=9;k++)
+		{
+			if(temp[i][j][k]==0&&a[i][j]==0)
+			{
+				temp2++;
+				if(temp2>=2)
+				{
+					break;
+				}
+				n1=i;
+				n2=j;
+				n3=k;
+			}
+		}
+		if(temp2==1)
+		{
+			return 1;
+		}
+	}
+}
+
 
 return 0;
 }
